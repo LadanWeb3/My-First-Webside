@@ -219,9 +219,21 @@ function canzaLauni() {
 
     // Ƙirƙirar sabon tag na <li>
     let sabonAiki = document.createElement("li");
-    sabonAiki.textContent = aikiRubutu;
+    sabonAiki.textContent = aikiRubutu + " ";
 
-    // Sanya shi a cikin jerin <ul>
+    // Ƙirƙirar maɓallin gogewa (Delete button)
+    let gogeBtn = document.createElement("button");
+    gogeBtn.textContent = "Goge";
+    gogeBtn.style.color = "red";
+    gogeBtn.style.marginLeft = "10px";
+
+    // Abin da zai faru idan an danna maɓallin goge
+    gogeBtn.onclick = function() {
+      sabonAiki.remove();
+    };
+
+    // Sanya maɓallin goge a cikin <li> sannan a sa shi a <ul>
+    sabonAiki.appendChild(gogeBtn);
     document.getElementById("jerinAyyuka").appendChild(sabonAiki);
 
     // Wanke akwatin rubutun
