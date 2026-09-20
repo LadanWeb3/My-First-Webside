@@ -220,11 +220,22 @@ function canzaLauni() {
     // Ƙirƙirar sabon tag na <li>
     let sabonAiki = document.createElement("li");
     sabonAiki.textContent = aikiRubutu + " ";
+    sabonAiki.style.marginBottom = "8px"; // Badawa sarari tsakanin ayyuka
 
     // Ƙirƙirar maɓallin gogewa (Delete button)
     let gogeBtn = document.createElement("button");
     gogeBtn.textContent = "Goge";
-    gogeBtn.style.color = "red";
+    
+    // Gyara fasalin maɓallin goge kadai
+    gogeBtn.style.width = "auto";
+    gogeBtn.style.display = "inline-block";
+    gogeBtn.style.padding = "2px 8px";
+    gogeBtn.style.fontSize = "12px";
+    gogeBtn.style.backgroundColor = "#ff4d4d";
+    gogeBtn.style.color = "white";
+    gogeBtn.style.border = "none";
+    gogeBtn.style.borderRadius = "4px";
+    gogeBtn.style.cursor = "pointer";
     gogeBtn.style.marginLeft = "10px";
 
     // Abin da zai faru idan an danna maɓallin goge
