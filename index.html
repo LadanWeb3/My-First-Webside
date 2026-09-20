@@ -152,156 +152,17 @@
         <!-- Form din Tuntuba -->
     <div class="card">
       <h2>Tuntube Mu:</h2>
-      <<form action="https://formspree.io/f/https://formspree.io/f/xyezyeqr" method="POST" id="myForm">
->
+      <form action="https://formspree.io/f/xyezyeqr" method="POST" id="myForm">
         <label for="fname">Cikakken Suna:</label><br>
-        <input type="text" id="fname" placeholder="Saka sunanka"><br><br>
+        <input type="text" id="fname" name="name" placeholder="Saka sunanka"><br><br>
 
         <label for="email">Adireshin Email:</label><br>
-        <input type="email" id="email" placeholder="Saka email dinka"><br><br>
+        <input type="email" name="email" id="email" placeholder="Saka email dinka"><br><br>
 
         <label for="message">Saƙonku:</label><br>
-        <textarea id="message" rows="4" placeholder="Rubuta saƙonka anan..."></textarea><br><br>
+        <textarea id="message" name="message" rows="4" placeholder="Rubuta saƙonka anan..."></textarea><br><br>
     <p id="sako" style="color: red; font-weight: bold;"></p>
-        <button type="button" onclick="dubaForm()">Tura Sako</button>
-
-      </form>
-    </div>
-<script>
-function canzaLauni() {
-    document.body.classList.toggle("dark-theme");
-  }
-
-  function dubaForm() {
-    let suna = document.querySelector('input[type="text"]').value;
-    let email = document.querySelector('input[type="email"]').value;
-    let sakoAkwati = document.getElementById("sako");
-
-    if (suna === "" || email === "") {
-      sakoAkwati.style.color = "red";
-      sakoAkwati.innerHTML = "Don Allah cike sunanka da email dinka kafin tura sako!";
-    } else {
-      sakoAkwati.style.color = "green";
-      sakoAkwati.innerHTML = "Mungode " + suna + "! Sakonka ya samu.";
-    }
-  }
-
-</script>
-
-</>
-  </body>
-</html>
-      }
-            /* Kawata Akwatunan Shigar da Bayani */
-      input[type="text"], 
-      input[type="email"], 
-      textarea {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-sizing: border-box; /* Tabbatar cewa fadin bai wuce allo ba */
-      }
-
-      /* Sauya launin akwati idan aka danna shi (Focus State) */
-      input:focus, textarea:focus {
-        border-color: #1a73e8;
-        outline: none;
-      }
-
-      /* Maida Maɓalli mai feni idan an danna */
-      button {
-        width: 100%;
-        margin-top: 10px;
-        cursor: pointer;
-      }
-      .container {
-  max-width: 500px;
-  margin: 0 auto;
-}
-      /* Amfani da Flexbox */
-      .skills-container {
-        display: flex;
-        gap: 10px; /* Tazarar tsakanin akwatuna */
-        flex-wrap: wrap; /* Ya koma kasa idan allon ya yi kankanta */
-      }
-
-      .skill-box {
-        background-color: #e8f0fe;
-        color: #1a73e8;
-        padding: 10px 15px;
-        border-radius: 8px;
-        font-weight: bold;
-        flex: 1; /* Rarraba girma daidai wa daida */
-        text-align: center;
-      }
-      /* Class din Dark Mode */
-      .dark-theme {
-        background-color: #121212;
-        color: #ffffff;
-      }
-      /* Gyaran launin rubutu a Dark Mode */
-      .dark-theme h1, 
-      .dark-theme h2, 
-      .dark-theme h3, 
-      .dark-theme p, 
-      .dark-theme label {
-        color: #ffffff;
-      }
-
-      /* Gyaran akwatin card a Dark Mode */
-      .dark-theme .card {
-        background-color: #1e1e1e;
-        color: #ffffff;
-      }
-.dark-theme a {
-  color: #8ab4f8;
-}
-
-    </style>
-  </head>
-
-    <title>Shafina Na Farko</title>
-  </head>
-  <div class="container">
-  <body>
-
-    <h1>Sannu da Zuwa Shafina!</h1>
-    <p>Suna na Ladan, kuma ina koyon gina yanar gizo ta hanyar amfani da wayata.</p>
-
-    <!-- Sanya Hoto -->
-    <h2>Hotona:</h2>
-    <img src="https://picsum.photos/100" alt="Hoto na gwaji" width="100">
-    <button onclick="canzaLauni()">Sauya Launin Shafi (Dark Mode)</button>
-
-
-
-        <h2>Abubuwan da nake sha'awa:</h2>
-    <div class="skills-container">
-      <div class="skill-box">Koyon Coding</div>
-      <div class="skill-box">Tsarin Yanar Gizo</div>
-      <div class="skill-box">Kasuwancin Yanar Gizo</div>
-    </div>
-
-
-    <!-- Sanya Link -->
-    <h2>Shaguna ko Shafukan Waje:</h2>
-    <p>Danna <a href="https://www.aquafunded.com" target="_blank">nan domin buɗe shafin aqua funded</a>.</p>
-        <!-- Form din Tuntuba -->
-    <div class="card">
-      <h2>Tuntube Mu:</h2>
-      <form>
-        <label for="fname">Cikakken Suna:</label><br>
-        <input type="text" id="fname" placeholder="Saka sunanka"><br><br>
-
-        <label for="email">Adireshin Email:</label><br>
-        <input type="email" id="email" placeholder="Saka email dinka"><br><br>
-
-        <label for="message">Saƙonku:</label><br>
-        <textarea id="message" rows="4" placeholder="Rubuta saƙonka anan..."></textarea><br><br>
-    <p id="sako" style="color: red; font-weight: bold;"></p>
-        <button type="button" onclick="dubaForm()">Tura Sako</button>
+        <button type="submit" onclick="dubaForm()">Tura Sako</button>
 
       </form>
     </div>
