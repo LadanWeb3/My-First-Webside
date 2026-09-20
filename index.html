@@ -197,5 +197,37 @@ function canzaLauni() {
 </script>
 
 </>
+    <!-- Sashen Ayyukana (To-Do List) -->
+<hr>
+<h2>Ayyukana na Yau (To-Do List):</h2>
+<input type="text" id="aikiInput" placeholder="Rubuta sabon aiki...">
+<button type="button" onclick="karaAiki()">Ƙara Aiki</button>
+
+<ul id="jerinAyyuka">
+  <!-- Ayyukan za su riƙa fitowa a nan -->
+</ul>
+
+<script>
+  function karaAiki() {
+    let input = document.getElementById("aikiInput");
+    let aikiRubutu = input.value;
+
+    if (aikiRubutu === "") {
+      alert("Tabbatar ka rubuta wani aiki kafin danna maɓalli!");
+      return;
+    }
+
+    // Ƙirƙirar sabon tag na <li>
+    let sabonAiki = document.createElement("li");
+    sabonAiki.textContent = aikiRubutu;
+
+    // Sanya shi a cikin jerin <ul>
+    document.getElementById("jerinAyyuka").appendChild(sabonAiki);
+
+    // Wanke akwatin rubutun
+    input.value = "";
+  }
+</script>
+
   </body>
 </html>
